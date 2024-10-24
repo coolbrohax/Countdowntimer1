@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html id="html1">
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+	<script src="./scripts.js"></script>
+	<h1>Lesson 1</h1>
+	<h2>How to add and multiply using JavaScript and HTML</h2>
+	<p>Using let in javascript you can do let x = 10 and let y = 10 this lets you set number variables. You can then make a onclick function by doing function count() { alert(x * y)
+	</p>
+	<div>
+		<button id="button1" onmousedown="count()">Click me to multiply</button>
+		<button id="button2" onmousedown="countreset();">Reset</button>
+		<button id="button3" onclick="changeText();">Make New Variable</button>
+		<button id="button4" onclick="multiplyMoreVariables();">Multiply 10 x 10 x 25</button>
+	</div>
+	<h1 id="100">x = 10 &nbsp; &nbsp;</h1>
+	<h1>y = 10</h1>
+	<h1> &nbsp; &nbsp; = </h1>
+	<h1 id="1000"></h1>
+	<h1>Lesson 2</h1>
+	<h2>How to change background color or change background to image</h2>
+	<button id="button5" onmousedown="changeBackgroundColor();">Change Background Color</button>
+	<button id="button6" onmousedown="changeBackgroundImage();">Change Background Image</button>
+	<button id="button11" onmousedown="changeBackgroundRainbow();">Change Background To Rainbow</button>
+	<button id="button7" onmousedown="resetbackground();">Reset Background</button>
+	<button id="button8" onmousedown="changeallbuttons();">Change Buttons Color</button>
+	<button id="button9" onmousedown="resetbuttons();">Reset Buttons Color</button>
+	<button id="rainbow-button" onmousedown="rainbowButton();">Change All Buttons to Rainbow Buttons</button>
+	<h1>Lesson 3</h1>
+	<h2>Adding Custom variables</h2>
+	<p></p>
+	<input type="text" class="input1" id="customx1"></input>
+	<input type="text" id="customx2"></input>
+	<input type="text" id="count1000" readonly></input>
+	<button id="button10" onmousedown="calculateCount();">Add</button>
+	<h1>Thanks for checking my lessons out</h1>
+	<button id="button12" onmousedown="openWindow();">Open source code</button>
+	<h2>HALLOWEEN COUNTDOWN</h2>
+	<p>This is a countdown for when I get to go to my friends house.</p>
+	<p id="demo" class="p777"></p>
+	<audio loop id="audio" src="https://media.memesoundeffects.com/2024/08/Tuco-GET-OUT-Sound-Effect.mp3" type="audio/mpeg"></audio>
+	<h1 id="h1party"></h1>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 26, 2024 16:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+	let myAudio = document.getElementById("audio");
+	myAudio.play();
+    document.getElementById("h1party").innerHTML = "The party never ends";
+	document.getElementById("html1").classList.add("animation");
+	document.getElementById("body1").style.backgroundImage = "url('https://www.icegif.com/wp-content/uploads/2023/08/icegif-572.gif')";
+  }
+}, 1000);
+</script>
+</body>
+</html>
